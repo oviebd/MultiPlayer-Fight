@@ -5716,7 +5716,7 @@ Prefab:
     - target: {fileID: 114470227357006900, guid: 43f0588038221734ab84455479cbf07b,
         type: 2}
       propertyPath: players.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4069284917104898, guid: 43f0588038221734ab84455479cbf07b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5766,7 +5766,7 @@ Prefab:
         type: 2}
       propertyPath: players.Array.data[2].m_SpawnPoint
       value: 
-      objectReference: {fileID: 1031908328}
+      objectReference: {fileID: 1273425972}
     - target: {fileID: 114470227357006900, guid: 43f0588038221734ab84455479cbf07b,
         type: 2}
       propertyPath: players.Array.data[3].m_SpawnPoint
