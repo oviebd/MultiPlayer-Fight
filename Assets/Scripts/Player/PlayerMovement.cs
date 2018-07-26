@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Dash()
     {
-        /*if (!dashing)
+        if (!dashing)
         {
             dashing = true;
 
@@ -154,6 +154,6 @@ public class PlayerMovement : MonoBehaviour
            // _rb.velocity = Vector3.zero;
 
             trailRenderer.SetActive(false);
-        }*/
+        }
     }
 }
