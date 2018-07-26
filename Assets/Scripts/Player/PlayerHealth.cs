@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
 
+    [SerializeField] private Slider healthSlider;
     [HideInInspector]public int currentHealth;
     Damageable _damageableScript;
 
@@ -17,7 +19,7 @@ public class PlayerHealth : MonoBehaviour {
     public void PlayerDamage()
     {
         RetriveCurrentHealth();
-
+        healthSlider.value = currentHealth;
         if (currentHealth <= 0)
         {
             Death();

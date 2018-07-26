@@ -550,7 +550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &77258598
 GameObject:
@@ -5716,7 +5716,7 @@ Prefab:
     - target: {fileID: 114470227357006900, guid: 43f0588038221734ab84455479cbf07b,
         type: 2}
       propertyPath: players.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4069284917104898, guid: 43f0588038221734ab84455479cbf07b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5766,7 +5766,7 @@ Prefab:
         type: 2}
       propertyPath: players.Array.data[2].m_SpawnPoint
       value: 
-      objectReference: {fileID: 1273425972}
+      objectReference: {fileID: 1031908328}
     - target: {fileID: 114470227357006900, guid: 43f0588038221734ab84455479cbf07b,
         type: 2}
       propertyPath: players.Array.data[3].m_SpawnPoint
@@ -7234,6 +7234,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 224669961631957092, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224669961631957092, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1255349539958192, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -7677,6 +7687,7 @@ GameObject:
   - component: {fileID: 1695164894}
   - component: {fileID: 1695164893}
   - component: {fileID: 1695164896}
+  - component: {fileID: 1717534311}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -7751,9 +7762,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695164891}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-
 --- !u!114 &1695164896
-
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1695164891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1717534309
 GameObject:
   m_ObjectHideFlags: 0
@@ -7762,7 +7781,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1717534312}
-  - component: {fileID: 1717534311}
   - component: {fileID: 1717534310}
   m_Layer: 0
   m_Name: EventSystem
@@ -7790,12 +7808,10 @@ MonoBehaviour:
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &1717534311
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-
   m_GameObject: {fileID: 1695164891}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7811,16 +7827,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-
-  m_GameObject: {fileID: 1717534309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!4 &1717534312
 Transform:
   m_ObjectHideFlags: 0
@@ -7832,9 +7838,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &1733206959
 GameObject:
   m_ObjectHideFlags: 0

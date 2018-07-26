@@ -26,7 +26,7 @@ public class ProjectileBasedWeapon : MonoBehaviour
         _fieldOfViewHelper = gameObject.GetComponent<FieldOfViewHelper>();
 
         _playerNum = _playerWeaponManager.playerNum;
-        Debug.Log("Player Num : "  + _playerNum);
+        Debug.Log("Player Num  in fire : "  + _playerNum);
         _prevBulletSpawnTime = Time.time;
         _fireBtn = "P" + _playerNum + "Attack1";
     }

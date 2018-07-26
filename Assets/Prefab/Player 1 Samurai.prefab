@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 114409754980250954}
   - component: {fileID: 114582566434950380}
   m_Layer: 9
-  m_Name: Canvas
+  m_Name: Health Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1627,15 +1627,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1255349539958192}
-
   m_LocalRotation: {x: -0, y: -0.97721565, z: -0, w: -0.21224889}
   m_LocalPosition: {x: -13.782454, y: 0, z: 1.2917715}
   m_LocalScale: {x: 2, y: 2, z: 2}
-
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-
   m_Children:
   - {fileID: 4514423427078116}
   - {fileID: 4089334659229584}
@@ -1644,11 +1638,7 @@ Transform:
   - {fileID: 224558408590474604}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-
   m_LocalEulerAnglesHint: {x: 0, y: -204.508, z: 0}
-
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!4 &4017970962977266
 Transform:
   m_ObjectHideFlags: 1
@@ -3463,6 +3453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3283700b44d22e5449149384101d7f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 114496918951313464}
   currentHealth: 0
 --- !u!114 &114111751751757494
 MonoBehaviour:
@@ -3518,6 +3509,7 @@ MonoBehaviour:
   _movingSpeed: 10
   _hitParticle: {fileID: 0}
   _destroyTime: 5
+  trail: {fileID: 0}
   damage: 20
 --- !u!114 &114297785887421404
 MonoBehaviour:
@@ -13129,7 +13121,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1243574199242438}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224239786266795176}
@@ -13138,8 +13130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.1}
-  m_SizeDelta: {x: 2, y: 2}
+  m_AnchoredPosition: {x: 0.01, y: 0.1}
+  m_SizeDelta: {x: 1.5, y: 1.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224669961631957092
 RectTransform:

@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
         //  float animationSpeed = (running ? 3.0f : 6.5f) * inputDir.magnitude;
         float animationSpeed = 8.0f * inputDir.magnitude;
-      //  _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
+        _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
     }
 
   
