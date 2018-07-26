@@ -10,6 +10,7 @@ public class ProjectileBullet : MonoBehaviour
     [SerializeField] private float _movingSpeed = 10f;
     [SerializeField] private GameObject _hitParticle;
     [SerializeField] private float _destroyTime = 5.0f;
+    [SerializeField] private GameObject trail ;
 
     private bool _isCollided =false;
     private bool _isMoving;
@@ -20,19 +21,23 @@ public class ProjectileBullet : MonoBehaviour
    
     void Start()
     {
+        trail.SetActive(false);
         Destroy(gameObject, _destroyTime);
         // _isMoving = false;
         _rb = GetComponent<Rigidbody>();
+        Invoke("InstantiateTrail", .2f);
 
     }
 
+    void InstantiateTrail()
+    {
+        trail.SetActive(true);
+    }
 
     public void SetTarget(GameObject target)
     {
-
         targetedObj = target;
         _isMoving = true;
-       // Debug.Log("Target set : is moving" + _isMoving);
     }
 
     void Update()
@@ -81,7 +86,11 @@ public class ProjectileBullet : MonoBehaviour
         { 
             //Check Is it the owner of the player
             if (other.GetComponent<PlayerWeaponManager>().playerNum == playerNum)
+            {
+                _isMoving = true;
+                _isCollided = false;
                 return;
+            }
         }
 
         Damageable damagable = other.GetComponent<Damageable>();
@@ -92,6 +101,10 @@ public class ProjectileBullet : MonoBehaviour
             damagable.Damage(damage);
        
             Debug.Log("Damageable Found ");
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
     }

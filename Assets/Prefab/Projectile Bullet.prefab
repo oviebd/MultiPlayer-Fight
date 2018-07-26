@@ -461,8 +461,9 @@ MonoBehaviour:
   playerNum: 0
   _movingSpeed: 30
   _hitParticle: {fileID: 1681135718779740}
-  viewRadious: 40
-  viewAngle: 10
+  _destroyTime: 5
+  trail: {fileID: 1691342467569810}
+  damage: 20
 --- !u!122 &122865193349209056
 Halo:
   m_ObjectHideFlags: 1

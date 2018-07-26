@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-      //  _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
         _anim = GetComponent<Animator>();
 
     }
@@ -61,6 +61,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        _rb.angularVelocity = Vector3.zero;
+        _rb.velocity = Vector3.zero;
+
         inputData = new Vector2(Input.GetAxisRaw(_horizontallInput), Input.GetAxisRaw(_veryticalInput));
         m_DashInput = Input.GetButtonDown(m_Dash);
     }
