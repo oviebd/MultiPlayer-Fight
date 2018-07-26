@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 27758864}
   - component: {fileID: 27758863}
   - component: {fileID: 27758862}
+  - component: {fileID: 27758865}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -198,6 +199,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 27758860}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &27758865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 27758860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &41319618
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +227,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 41319619}
+  - component: {fileID: 41319620}
   m_Layer: 13
   m_Name: GameObject (5)
   m_TagString: Untagged
@@ -236,6 +258,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &41319620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 41319618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &45191658
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +289,7 @@ GameObject:
   - component: {fileID: 45191662}
   - component: {fileID: 45191661}
   - component: {fileID: 45191660}
+  - component: {fileID: 45191663}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -321,6 +364,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45191658}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &45191663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 45191658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &48621787
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +395,7 @@ GameObject:
   - component: {fileID: 48621791}
   - component: {fileID: 48621790}
   - component: {fileID: 48621789}
+  - component: {fileID: 48621792}
   m_Layer: 13
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -406,6 +470,88 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48621787}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &48621792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48621787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!1 &75227171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 75227174}
+  - component: {fileID: 75227173}
+  - component: {fileID: 75227172}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &75227172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75227171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &75227173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75227171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &75227174
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75227171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &77258598
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +563,7 @@ GameObject:
   - component: {fileID: 77258602}
   - component: {fileID: 77258601}
   - component: {fileID: 77258600}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,6 +648,7 @@ GameObject:
   - component: {fileID: 91733912}
   - component: {fileID: 91733911}
   - component: {fileID: 91733910}
+  - component: {fileID: 91733913}
   m_Layer: 13
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -576,6 +723,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 91733908}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &91733913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91733908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &100583974
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +754,7 @@ GameObject:
   - component: {fileID: 100583978}
   - component: {fileID: 100583977}
   - component: {fileID: 100583976}
+  - component: {fileID: 100583979}
   m_Layer: 13
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -661,6 +829,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100583974}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &100583979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100583974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &103587783
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +860,7 @@ GameObject:
   - component: {fileID: 103587787}
   - component: {fileID: 103587786}
   - component: {fileID: 103587785}
+  - component: {fileID: 103587788}
   m_Layer: 13
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -746,6 +935,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 103587783}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &103587788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 103587783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &110374888
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +966,7 @@ GameObject:
   - component: {fileID: 110374892}
   - component: {fileID: 110374891}
   - component: {fileID: 110374890}
+  - component: {fileID: 110374893}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -831,6 +1041,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110374888}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &110374893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110374888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &116833935
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +1072,7 @@ GameObject:
   - component: {fileID: 116833939}
   - component: {fileID: 116833938}
   - component: {fileID: 116833937}
+  - component: {fileID: 116833940}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -916,6 +1147,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 116833935}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &116833940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116833935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &129694639
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +1178,7 @@ GameObject:
   - component: {fileID: 129694643}
   - component: {fileID: 129694642}
   - component: {fileID: 129694641}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,6 +1263,7 @@ GameObject:
   - component: {fileID: 131534484}
   - component: {fileID: 131534483}
   - component: {fileID: 131534482}
+  - component: {fileID: 131534485}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -1086,6 +1338,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131534480}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &131534485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131534480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &181218421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1369,7 @@ GameObject:
   - component: {fileID: 181218425}
   - component: {fileID: 181218424}
   - component: {fileID: 181218423}
+  - component: {fileID: 181218426}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -1171,6 +1444,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 181218421}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &181218426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 181218421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &185008076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1472,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 185008077}
+  - component: {fileID: 185008078}
   m_Layer: 13
   m_Name: GameObject (8)
   m_TagString: Untagged
@@ -1216,6 +1510,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185008078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185008076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &198230973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1541,7 @@ GameObject:
   - component: {fileID: 198230977}
   - component: {fileID: 198230976}
   - component: {fileID: 198230975}
+  - component: {fileID: 198230978}
   m_Layer: 13
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -1301,6 +1616,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 198230973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &198230978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198230973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &223707110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1647,7 @@ GameObject:
   - component: {fileID: 223707114}
   - component: {fileID: 223707113}
   - component: {fileID: 223707112}
+  - component: {fileID: 223707115}
   m_Layer: 13
   m_Name: Cube (14)
   m_TagString: Untagged
@@ -1386,6 +1722,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223707110}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &223707115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223707110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &236759902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1753,7 @@ GameObject:
   - component: {fileID: 236759906}
   - component: {fileID: 236759905}
   - component: {fileID: 236759904}
+  - component: {fileID: 236759907}
   m_Layer: 13
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -1471,6 +1828,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 236759902}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &236759907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236759902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &254780184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,6 +1859,7 @@ GameObject:
   - component: {fileID: 254780188}
   - component: {fileID: 254780187}
   - component: {fileID: 254780186}
+  - component: {fileID: 254780189}
   m_Layer: 13
   m_Name: Cube (16)
   m_TagString: Untagged
@@ -1556,6 +1934,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 254780184}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &254780189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254780184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &267482922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1965,7 @@ GameObject:
   - component: {fileID: 267482926}
   - component: {fileID: 267482925}
   - component: {fileID: 267482924}
+  - component: {fileID: 267482927}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -1641,6 +2040,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 267482922}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &267482927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 267482922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &318834874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +2071,7 @@ GameObject:
   - component: {fileID: 318834878}
   - component: {fileID: 318834877}
   - component: {fileID: 318834876}
+  - component: {fileID: 318834879}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -1726,6 +2146,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 318834874}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &318834879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318834874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &325304174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +2177,7 @@ GameObject:
   - component: {fileID: 325304178}
   - component: {fileID: 325304177}
   - component: {fileID: 325304176}
+  - component: {fileID: 325304179}
   m_Layer: 13
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -1811,6 +2252,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325304174}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &325304179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325304174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &339162661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +2283,7 @@ GameObject:
   - component: {fileID: 339162665}
   - component: {fileID: 339162664}
   - component: {fileID: 339162663}
+  - component: {fileID: 339162666}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1896,6 +2358,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 339162661}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &339162666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339162661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &383251486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +2389,7 @@ GameObject:
   - component: {fileID: 383251490}
   - component: {fileID: 383251489}
   - component: {fileID: 383251488}
+  - component: {fileID: 383251491}
   m_Layer: 13
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -1981,6 +2464,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 383251486}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &383251491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 383251486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &408284406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +2495,7 @@ GameObject:
   - component: {fileID: 408284410}
   - component: {fileID: 408284409}
   - component: {fileID: 408284408}
+  - component: {fileID: 408284411}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -2066,6 +2570,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 408284406}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &408284411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408284406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &454259439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2601,7 @@ GameObject:
   - component: {fileID: 454259443}
   - component: {fileID: 454259442}
   - component: {fileID: 454259441}
+  - component: {fileID: 454259444}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -2151,6 +2676,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 454259439}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &454259444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 454259439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &512069009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2707,7 @@ GameObject:
   - component: {fileID: 512069013}
   - component: {fileID: 512069012}
   - component: {fileID: 512069011}
+  - component: {fileID: 512069014}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -2236,6 +2782,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 512069009}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &512069014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 512069009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &518676998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +2813,7 @@ GameObject:
   - component: {fileID: 518677002}
   - component: {fileID: 518677001}
   - component: {fileID: 518677000}
+  - component: {fileID: 518677003}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -2321,6 +2888,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 518676998}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &518677003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518676998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &521202802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2919,7 @@ GameObject:
   - component: {fileID: 521202806}
   - component: {fileID: 521202805}
   - component: {fileID: 521202804}
+  - component: {fileID: 521202807}
   m_Layer: 13
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -2406,6 +2994,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 521202802}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &521202807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 521202802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &524263007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2417,6 +3025,7 @@ GameObject:
   - component: {fileID: 524263011}
   - component: {fileID: 524263010}
   - component: {fileID: 524263009}
+  - component: {fileID: 524263012}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -2491,6 +3100,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524263007}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &524263012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524263007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &559923272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,6 +3131,7 @@ GameObject:
   - component: {fileID: 559923276}
   - component: {fileID: 559923275}
   - component: {fileID: 559923274}
+  - component: {fileID: 559923277}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -2576,6 +3206,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 559923272}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &559923277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559923272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &575566483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,6 +3267,7 @@ GameObject:
   - component: {fileID: 576590119}
   - component: {fileID: 576590118}
   - component: {fileID: 576590117}
+  - component: {fileID: 576590120}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -2691,6 +3342,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 576590115}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &576590120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576590115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &598369686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,6 +3373,7 @@ GameObject:
   - component: {fileID: 598369690}
   - component: {fileID: 598369689}
   - component: {fileID: 598369688}
+  - component: {fileID: 598369691}
   m_Layer: 13
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -2776,6 +3448,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 598369686}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &598369691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 598369686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &714785407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +3479,7 @@ GameObject:
   - component: {fileID: 714785411}
   - component: {fileID: 714785410}
   - component: {fileID: 714785409}
+  - component: {fileID: 714785412}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -2861,6 +3554,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 714785407}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &714785412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714785407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &735843571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,7 +3585,7 @@ GameObject:
   - component: {fileID: 735843575}
   - component: {fileID: 735843574}
   - component: {fileID: 735843573}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2957,6 +3670,7 @@ GameObject:
   - component: {fileID: 749324575}
   - component: {fileID: 749324574}
   - component: {fileID: 749324573}
+  - component: {fileID: 749324576}
   m_Layer: 13
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -3031,6 +3745,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 749324571}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &749324576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 749324571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &773299689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3042,6 +3776,7 @@ GameObject:
   - component: {fileID: 773299693}
   - component: {fileID: 773299692}
   - component: {fileID: 773299691}
+  - component: {fileID: 773299694}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -3116,6 +3851,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 773299689}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &773299694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773299689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &773742870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,6 +3882,7 @@ GameObject:
   - component: {fileID: 773742874}
   - component: {fileID: 773742873}
   - component: {fileID: 773742872}
+  - component: {fileID: 773742875}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -3201,6 +3957,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 773742870}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &773742875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773742870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &801739280
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,6 +3988,7 @@ GameObject:
   - component: {fileID: 801739284}
   - component: {fileID: 801739283}
   - component: {fileID: 801739282}
+  - component: {fileID: 801739285}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -3286,6 +4063,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 801739280}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &801739285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 801739280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &803071159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,6 +4094,7 @@ GameObject:
   - component: {fileID: 803071163}
   - component: {fileID: 803071162}
   - component: {fileID: 803071161}
+  - component: {fileID: 803071164}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -3371,6 +4169,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803071159}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &803071164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803071159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &835169971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,6 +4200,7 @@ GameObject:
   - component: {fileID: 835169975}
   - component: {fileID: 835169974}
   - component: {fileID: 835169973}
+  - component: {fileID: 835169976}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -3456,6 +4275,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 835169971}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &835169976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835169971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &844769220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,6 +4391,7 @@ GameObject:
   - component: {fileID: 858258520}
   - component: {fileID: 858258519}
   - component: {fileID: 858258518}
+  - component: {fileID: 858258521}
   m_Layer: 13
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -3626,6 +4466,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858258516}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &858258521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 858258516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &883941405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,6 +4497,7 @@ GameObject:
   - component: {fileID: 883941409}
   - component: {fileID: 883941408}
   - component: {fileID: 883941407}
+  - component: {fileID: 883941410}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -3711,6 +4572,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883941405}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &883941410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883941405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &897026163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,6 +4603,7 @@ GameObject:
   - component: {fileID: 897026167}
   - component: {fileID: 897026166}
   - component: {fileID: 897026165}
+  - component: {fileID: 897026168}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -3796,6 +4678,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 897026163}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &897026168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 897026163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &958138937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3807,6 +4709,7 @@ GameObject:
   - component: {fileID: 958138941}
   - component: {fileID: 958138940}
   - component: {fileID: 958138939}
+  - component: {fileID: 958138942}
   m_Layer: 13
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -3881,6 +4784,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958138937}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &958138942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958138937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &978149413
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,6 +4900,7 @@ GameObject:
   - component: {fileID: 990489321}
   - component: {fileID: 990489320}
   - component: {fileID: 990489319}
+  - component: {fileID: 990489322}
   m_Layer: 13
   m_Name: Cube (13)
   m_TagString: Untagged
@@ -4051,6 +4975,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 990489317}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &990489322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990489317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &998696549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,6 +5003,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 998696550}
+  - component: {fileID: 998696551}
   m_Layer: 13
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -4089,6 +5034,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998696551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998696549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1015723630
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,6 +5180,7 @@ GameObject:
   - component: {fileID: 1138032418}
   - component: {fileID: 1138032417}
   - component: {fileID: 1138032416}
+  - component: {fileID: 1138032419}
   m_Layer: 13
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -4289,6 +5255,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1138032414}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1138032419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138032414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1138504809
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,6 +5286,7 @@ GameObject:
   - component: {fileID: 1138504813}
   - component: {fileID: 1138504812}
   - component: {fileID: 1138504811}
+  - component: {fileID: 1138504814}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -4374,6 +5361,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1138504809}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1138504814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138504809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1160739695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,6 +5392,7 @@ GameObject:
   - component: {fileID: 1160739699}
   - component: {fileID: 1160739698}
   - component: {fileID: 1160739697}
+  - component: {fileID: 1160739700}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -4459,6 +5467,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160739695}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1160739700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160739695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1189172270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4467,6 +5495,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1189172271}
+  - component: {fileID: 1189172272}
   m_Layer: 13
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -4492,6 +5521,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1189172272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1189172270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1205285428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,6 +5549,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1205285429}
+  - component: {fileID: 1205285430}
   m_Layer: 13
   m_Name: GameObject (3)
   m_TagString: Untagged
@@ -4530,6 +5580,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1205285430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205285428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1226184801
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,6 +5611,7 @@ GameObject:
   - component: {fileID: 1226184805}
   - component: {fileID: 1226184804}
   - component: {fileID: 1226184803}
+  - component: {fileID: 1226184806}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -4615,6 +5686,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1226184801}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1226184806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1226184801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1001 &1249094987
 Prefab:
   m_ObjectHideFlags: 0
@@ -4705,6 +5796,7 @@ GameObject:
   - component: {fileID: 1258088379}
   - component: {fileID: 1258088378}
   - component: {fileID: 1258088377}
+  - component: {fileID: 1258088380}
   m_Layer: 13
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -4779,6 +5871,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1258088375}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1258088380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258088375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1268527363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4790,6 +5902,7 @@ GameObject:
   - component: {fileID: 1268527367}
   - component: {fileID: 1268527366}
   - component: {fileID: 1268527365}
+  - component: {fileID: 1268527368}
   m_Layer: 13
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -4864,6 +5977,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268527363}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1268527368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268527363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1268566535
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,6 +6008,7 @@ GameObject:
   - component: {fileID: 1268566539}
   - component: {fileID: 1268566538}
   - component: {fileID: 1268566537}
+  - component: {fileID: 1268566540}
   m_Layer: 13
   m_Name: Cube (12)
   m_TagString: Untagged
@@ -4949,6 +6083,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268566535}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1268566540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268566535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1273425971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5045,6 +6199,7 @@ GameObject:
   - component: {fileID: 1295754040}
   - component: {fileID: 1295754039}
   - component: {fileID: 1295754038}
+  - component: {fileID: 1295754041}
   m_Layer: 13
   m_Name: Cube (15)
   m_TagString: Untagged
@@ -5119,6 +6274,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1295754036}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1295754041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295754036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1296872999
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,6 +6305,7 @@ GameObject:
   - component: {fileID: 1296873003}
   - component: {fileID: 1296873002}
   - component: {fileID: 1296873001}
+  - component: {fileID: 1296873004}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -5204,6 +6380,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296872999}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1296873004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296872999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1304965483
 GameObject:
   m_ObjectHideFlags: 0
@@ -5212,6 +6408,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1304965484}
+  - component: {fileID: 1304965485}
   m_Layer: 13
   m_Name: GameObject (6)
   m_TagString: Untagged
@@ -5237,6 +6434,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304965485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1304965483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1327722337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,6 +6508,7 @@ GameObject:
   - component: {fileID: 1337246081}
   - component: {fileID: 1337246080}
   - component: {fileID: 1337246079}
+  - component: {fileID: 1337246082}
   m_Layer: 13
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -5365,6 +6583,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337246077}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1337246082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1337246077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1378161188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,6 +6614,7 @@ GameObject:
   - component: {fileID: 1378161192}
   - component: {fileID: 1378161191}
   - component: {fileID: 1378161190}
+  - component: {fileID: 1378161193}
   m_Layer: 13
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -5450,6 +6689,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1378161188}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1378161193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378161188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1419906125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5461,6 +6720,7 @@ GameObject:
   - component: {fileID: 1419906129}
   - component: {fileID: 1419906128}
   - component: {fileID: 1419906127}
+  - component: {fileID: 1419906130}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -5535,6 +6795,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1419906125}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1419906130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1419906125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1473773520
 GameObject:
   m_ObjectHideFlags: 0
@@ -5546,6 +6826,7 @@ GameObject:
   - component: {fileID: 1473773524}
   - component: {fileID: 1473773523}
   - component: {fileID: 1473773522}
+  - component: {fileID: 1473773525}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -5620,6 +6901,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1473773520}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1473773525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473773520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1504528364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5718,6 +7019,7 @@ GameObject:
   - component: {fileID: 1567345330}
   - component: {fileID: 1567345329}
   - component: {fileID: 1567345328}
+  - component: {fileID: 1567345331}
   m_Layer: 13
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -5792,6 +7094,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1567345326}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1567345331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1567345326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1582931317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5882,7 +7204,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.17
+      value: -13.782454
       objectReference: {fileID: 0}
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5890,33 +7212,29 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.42
+      value: 1.2917715
       objectReference: {fileID: 0}
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.99946177
+      value: -0.97721565
       objectReference: {fileID: 0}
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.03280636
+      value: -0.21224889
       objectReference: {fileID: 0}
     - target: {fileID: 4017125766100050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1255349539958192, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1247139405179622, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -5934,6 +7252,7 @@ GameObject:
   - component: {fileID: 1625916727}
   - component: {fileID: 1625916726}
   - component: {fileID: 1625916725}
+  - component: {fileID: 1625916728}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -6008,6 +7327,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1625916723}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1625916728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625916723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1639381384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6019,6 +7358,7 @@ GameObject:
   - component: {fileID: 1639381388}
   - component: {fileID: 1639381387}
   - component: {fileID: 1639381386}
+  - component: {fileID: 1639381389}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -6093,6 +7433,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1639381384}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1639381389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1639381384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1649800830
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,6 +7464,7 @@ GameObject:
   - component: {fileID: 1649800834}
   - component: {fileID: 1649800833}
   - component: {fileID: 1649800832}
+  - component: {fileID: 1649800835}
   m_Layer: 13
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -6178,6 +7539,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649800830}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1649800835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649800830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1663528579
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,6 +7570,7 @@ GameObject:
   - component: {fileID: 1663528583}
   - component: {fileID: 1663528582}
   - component: {fileID: 1663528581}
+  - component: {fileID: 1663528584}
   m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -6263,6 +7645,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1663528579}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1663528584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1663528579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1695164891
 GameObject:
   m_ObjectHideFlags: 0
@@ -6274,6 +7676,7 @@ GameObject:
   - component: {fileID: 1695164895}
   - component: {fileID: 1695164894}
   - component: {fileID: 1695164893}
+  - component: {fileID: 1695164896}
   m_Layer: 13
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -6348,6 +7751,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695164891}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1695164896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1695164891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1733206959
 GameObject:
   m_ObjectHideFlags: 0
@@ -6359,6 +7782,7 @@ GameObject:
   - component: {fileID: 1733206963}
   - component: {fileID: 1733206962}
   - component: {fileID: 1733206961}
+  - component: {fileID: 1733206964}
   m_Layer: 13
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -6433,6 +7857,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1733206959}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1733206964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733206959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1743240316
 GameObject:
   m_ObjectHideFlags: 0
@@ -6441,6 +7885,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1743240317}
+  - component: {fileID: 1743240318}
   m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
@@ -6466,6 +7911,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1743240318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743240316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1743483263
 GameObject:
   m_ObjectHideFlags: 0
@@ -6477,6 +7942,7 @@ GameObject:
   - component: {fileID: 1743483267}
   - component: {fileID: 1743483266}
   - component: {fileID: 1743483265}
+  - component: {fileID: 1743483268}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -6551,6 +8017,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743483263}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1743483268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743483263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1749796916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6562,6 +8048,7 @@ GameObject:
   - component: {fileID: 1749796920}
   - component: {fileID: 1749796919}
   - component: {fileID: 1749796918}
+  - component: {fileID: 1749796921}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -6636,6 +8123,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1749796916}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1749796921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749796916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1763480012
 GameObject:
   m_ObjectHideFlags: 0
@@ -6647,6 +8154,7 @@ GameObject:
   - component: {fileID: 1763480016}
   - component: {fileID: 1763480015}
   - component: {fileID: 1763480014}
+  - component: {fileID: 1763480017}
   m_Layer: 13
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -6721,6 +8229,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763480012}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1763480017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763480012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1770206591
 GameObject:
   m_ObjectHideFlags: 0
@@ -6732,6 +8260,7 @@ GameObject:
   - component: {fileID: 1770206595}
   - component: {fileID: 1770206594}
   - component: {fileID: 1770206593}
+  - component: {fileID: 1770206596}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -6806,6 +8335,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1770206591}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1770206596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770206591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1779762371
 GameObject:
   m_ObjectHideFlags: 0
@@ -6814,6 +8363,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1779762372}
+  - component: {fileID: 1779762373}
   m_Layer: 13
   m_Name: GameObject (7)
   m_TagString: Untagged
@@ -6844,6 +8394,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1779762373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779762371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1780549788
 GameObject:
   m_ObjectHideFlags: 0
@@ -6855,6 +8425,7 @@ GameObject:
   - component: {fileID: 1780549792}
   - component: {fileID: 1780549791}
   - component: {fileID: 1780549790}
+  - component: {fileID: 1780549793}
   m_Layer: 13
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -6929,6 +8500,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1780549788}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1780549793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1780549788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1795265741
 GameObject:
   m_ObjectHideFlags: 0
@@ -6940,6 +8531,7 @@ GameObject:
   - component: {fileID: 1795265745}
   - component: {fileID: 1795265744}
   - component: {fileID: 1795265743}
+  - component: {fileID: 1795265746}
   m_Layer: 13
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -7014,6 +8606,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1795265741}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1795265746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1795265741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1836510112
 GameObject:
   m_ObjectHideFlags: 0
@@ -7025,6 +8637,7 @@ GameObject:
   - component: {fileID: 1836510116}
   - component: {fileID: 1836510115}
   - component: {fileID: 1836510114}
+  - component: {fileID: 1836510117}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -7099,6 +8712,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1836510112}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1836510117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836510112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1848037438
 GameObject:
   m_ObjectHideFlags: 0
@@ -7110,6 +8743,7 @@ GameObject:
   - component: {fileID: 1848037442}
   - component: {fileID: 1848037441}
   - component: {fileID: 1848037440}
+  - component: {fileID: 1848037443}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -7184,6 +8818,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1848037438}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1848037443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1848037438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1851356677
 GameObject:
   m_ObjectHideFlags: 0
@@ -7195,6 +8849,7 @@ GameObject:
   - component: {fileID: 1851356681}
   - component: {fileID: 1851356680}
   - component: {fileID: 1851356679}
+  - component: {fileID: 1851356682}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -7269,6 +8924,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1851356677}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1851356682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1851356677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1859818948
 GameObject:
   m_ObjectHideFlags: 0
@@ -7280,6 +8955,7 @@ GameObject:
   - component: {fileID: 1859818952}
   - component: {fileID: 1859818951}
   - component: {fileID: 1859818950}
+  - component: {fileID: 1859818953}
   m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
@@ -7354,6 +9030,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1859818948}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1859818953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859818948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1905526833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7365,7 +9061,7 @@ GameObject:
   - component: {fileID: 1905526837}
   - component: {fileID: 1905526836}
   - component: {fileID: 1905526835}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7447,6 +9143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1979269529}
+  - component: {fileID: 1979269530}
   m_Layer: 13
   m_Name: GameObject (4)
   m_TagString: Untagged
@@ -7472,6 +9169,26 @@ Transform:
   m_Father: {fileID: 1327722338}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1979269530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979269528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 0
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2003306400
 GameObject:
   m_ObjectHideFlags: 0
@@ -7580,6 +9297,7 @@ GameObject:
   - component: {fileID: 2059103859}
   - component: {fileID: 2059103858}
   - component: {fileID: 2059103857}
+  - component: {fileID: 2059103860}
   m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -7654,6 +9372,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2059103855}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2059103860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059103855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2059334970
 GameObject:
   m_ObjectHideFlags: 0
@@ -7665,6 +9403,7 @@ GameObject:
   - component: {fileID: 2059334974}
   - component: {fileID: 2059334973}
   - component: {fileID: 2059334972}
+  - component: {fileID: 2059334975}
   m_Layer: 13
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -7739,6 +9478,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2059334970}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2059334975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059334970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2070484782
 GameObject:
   m_ObjectHideFlags: 0
@@ -7750,6 +9509,7 @@ GameObject:
   - component: {fileID: 2070484786}
   - component: {fileID: 2070484785}
   - component: {fileID: 2070484784}
+  - component: {fileID: 2070484787}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -7824,6 +9584,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070484782}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2070484787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070484782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2070915225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7835,6 +9615,7 @@ GameObject:
   - component: {fileID: 2070915229}
   - component: {fileID: 2070915228}
   - component: {fileID: 2070915227}
+  - component: {fileID: 2070915230}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -7909,6 +9690,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070915225}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2070915230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070915225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2115001282
 GameObject:
   m_ObjectHideFlags: 0
@@ -7920,6 +9721,7 @@ GameObject:
   - component: {fileID: 2115001286}
   - component: {fileID: 2115001285}
   - component: {fileID: 2115001284}
+  - component: {fileID: 2115001287}
   m_Layer: 13
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -7994,6 +9796,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2115001282}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2115001287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115001282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &2115694808 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4069284917104898, guid: 43f0588038221734ab84455479cbf07b,
@@ -8010,6 +9832,7 @@ GameObject:
   - component: {fileID: 2140624197}
   - component: {fileID: 2140624196}
   - component: {fileID: 2140624195}
+  - component: {fileID: 2140624198}
   m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -8084,6 +9907,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2140624193}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2140624198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140624193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2141949498
 GameObject:
   m_ObjectHideFlags: 0
@@ -8095,6 +9938,7 @@ GameObject:
   - component: {fileID: 2141949502}
   - component: {fileID: 2141949501}
   - component: {fileID: 2141949500}
+  - component: {fileID: 2141949503}
   m_Layer: 13
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -8169,3 +10013,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2141949498}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2141949503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2141949498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
