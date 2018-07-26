@@ -3516,7 +3516,7 @@ MonoBehaviour:
   runSpeed: 6
   turnSmoothTime: 0.1
   speedSmoothTime: 0.1
-  dashSpeed: 2
+  dashSpeed: 20
   dash_Duration: 0.25
   dash_SpeedMultiplier: 10
   trailRenderer: {fileID: 1513306419731294}

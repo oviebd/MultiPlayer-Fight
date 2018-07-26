@@ -4625,7 +4625,7 @@ Prefab:
     - target: {fileID: 114470227357006900, guid: 43f0588038221734ab84455479cbf07b,
         type: 2}
       propertyPath: players.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4069284917104898, guid: 43f0588038221734ab84455479cbf07b, type: 2}
       propertyPath: m_LocalPosition.x
