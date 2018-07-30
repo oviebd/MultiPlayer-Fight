@@ -26,7 +26,7 @@ public class ProjectileBasedWeapon : MonoBehaviour
         _fieldOfViewHelper = gameObject.GetComponent<FieldOfViewHelper>();
 
         _playerNum = _playerWeaponManager.playerNum;
-        Debug.Log("Player Num  in fire : "  + _playerNum);
+      //  Debug.Log("Player Num  in fire : "  + _playerNum);
         _prevBulletSpawnTime = Time.time;
         _fireBtn = "P" + _playerNum + "Attack1";
     }
@@ -39,7 +39,7 @@ public class ProjectileBasedWeapon : MonoBehaviour
             if (Time.time - _prevBulletSpawnTime >= _bulletCoolDownTime)
             {
                 _prevBulletSpawnTime = Time.time;
-                Debug.Log("Fire Pressed");
+              //  Debug.Log("Fire Pressed");
                 //SpawnBullet(_gunPos);
                 CheckDestination();
             }

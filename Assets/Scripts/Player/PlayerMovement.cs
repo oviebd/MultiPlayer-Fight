@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
     bool CheckIsItRotating( float targetedRot, float currentRot)
     {
         float diff = targetedRot - currentRot;
-        Debug.Log(" Player Num : " + playerNum + " Diffecence : " + diff);
+     //   Debug.Log(" Player Num : " + playerNum + " Diffecence : " + diff);
       
 
         if ( Mathf.Abs(diff) == 0)
@@ -142,19 +142,19 @@ public class PlayerMovement : MonoBehaviour
 
             trailRenderer.SetActive(true);
 
-            Debug.Log(m_DashInput);
+           // Debug.Log(m_DashInput);
         }
 
         dash_Time += Time.deltaTime;
 
-        transform.Translate(dash_Direction  * dashSpeed * Time.deltaTime, Space.World);
-       // _rb.velocity = dash_Direction * dash_SpeedMultiplier * dashSpeed;
+      //  transform.Translate(dash_Direction  * dashSpeed * Time.deltaTime, Space.World);
+        _rb.velocity = dash_Direction * dash_SpeedMultiplier * dashSpeed;
 
         if (dash_Time >= dash_Duration && dashing)
         {
             dashing = false;
 
-           // _rb.velocity = Vector3.zero;
+            _rb.velocity = Vector3.zero;
 
             trailRenderer.SetActive(false);
         }

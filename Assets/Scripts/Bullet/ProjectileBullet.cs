@@ -16,8 +16,9 @@ public class ProjectileBullet : MonoBehaviour
     private bool _isMoving;
     private Rigidbody _rb;
 
+    public float nearestDistanceForTargetLose = 5.0f;
     public int damage = 20;
-
+    
    
     void Start()
     {
@@ -57,6 +58,12 @@ public class ProjectileBullet : MonoBehaviour
         Vector3 targetPos = new Vector3(targetedObj.transform.position.x, targetedObj.transform.position.y + 1, targetedObj.transform.position.z);
 
         float tempDistance = Vector3.Distance(transform.position, targetPos);
+
+        if (tempDistance <= nearestDistanceForTargetLose)
+        {
+            targetedObj = null;
+            return;
+        }
 
         var targetRotation = Quaternion.LookRotation(targetPos - transform.position);
         _rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, targetRotation, 200f));

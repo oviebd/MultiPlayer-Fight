@@ -32,7 +32,7 @@ public class RayCastBasedWeapon : MonoBehaviour
         // _fireBtn = "P" + _playerNum + "Attack2";
         _fireBtn = "P" + _playerNum + "Attack2";
 
-        Debug.Log("Raycast " + _fireBtn);
+       // Debug.Log("Raycast " + _fireBtn);
     }
 
 

@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour {
         if (_damageableScript != null)
         {
             currentHealth = _damageableScript.GetFullHealth();
-            Debug.Log("Player Current Health is : " + currentHealth);
+           // Debug.Log("Player Current Health is : " + currentHealth);
         }
     }
 }

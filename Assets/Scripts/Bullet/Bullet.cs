@@ -74,8 +74,6 @@ public class Bullet : MonoBehaviour
         {
             _rb.velocity = transform.forward * _movingSpeed;
         }
-
-
     }
 
     private void OnTriggerEnter(Collider other)

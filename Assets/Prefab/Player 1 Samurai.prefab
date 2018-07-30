@@ -3100,8 +3100,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99295044, y: 1.6290996, z: 0.81142175}
-  m_Center: {x: 0.0035247803, y: 1.0112287, z: 0.05432713}
+  m_Size: {x: 0.47236037, y: 1.6290996, z: 0.66089386}
+  m_Center: {x: -0.029855417, y: 1.0112287, z: 0.07568754}
 --- !u!82 &82641173209440480
 AudioSource:
   m_ObjectHideFlags: 1
@@ -3510,6 +3510,7 @@ MonoBehaviour:
   _hitParticle: {fileID: 0}
   _destroyTime: 5
   trail: {fileID: 0}
+  nearestDistanceForTargetLose: 5
   damage: 20
 --- !u!114 &114297785887421404
 MonoBehaviour:
@@ -3539,8 +3540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e4400952996104491ef44622ad2e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _viewRadious: 60
-  _viewAngle: 66
+  _viewRadious: 40
+  _viewAngle: 60
   targetMask:
     serializedVersion: 2
     m_Bits: 512
@@ -3741,7 +3742,7 @@ MonoBehaviour:
   runSpeed: 6
   turnSmoothTime: 0.1
   speedSmoothTime: 0.1
-  dashSpeed: 20
+  dashSpeed: 2
   dash_Duration: 0.25
   dash_SpeedMultiplier: 10
   trailRenderer: {fileID: 1513306419731294}
