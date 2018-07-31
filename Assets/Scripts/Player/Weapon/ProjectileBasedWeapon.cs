@@ -39,8 +39,8 @@ public class ProjectileBasedWeapon : MonoBehaviour
             if (Time.time - _prevBulletSpawnTime >= _bulletCoolDownTime)
             {
                 _prevBulletSpawnTime = Time.time;
-              //  Debug.Log("Fire Pressed");
-                //SpawnBullet(_gunPos);
+                //Debug.Log("Fire Pressed");
+               // SpawnBullet(_gunPos);
                 CheckDestination();
             }
         }
@@ -66,7 +66,7 @@ public class ProjectileBasedWeapon : MonoBehaviour
 
     void InstantiateBullet(GameObject hitObj)
     {
-
+       
         GameObject bullet_obj = Instantiate(_bulletPrefab);
         // Set it's position and rotation based on the gun positon.
         bullet_obj.transform.position = _gunPos.position;
@@ -76,6 +76,9 @@ public class ProjectileBasedWeapon : MonoBehaviour
 
         bullet.SetTarget(hitObj);
         bullet.playerNum = _playerNum;
+
+       // Debug.Log("Target obj " + bullet_obj.name);
+        //Debug.Log("player Num " + bullet.playerNum);
 
     }
 }

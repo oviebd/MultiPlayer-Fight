@@ -8,9 +8,10 @@ public class Damageable : MonoBehaviour,IDamageable {
     public int fullHealth=100;
     public bool isDestructive = false;
 
+    public bool isItSchild = false;
+
     //Effects 
     [HideInInspector]public GameObject particleEffect;
-
     [HideInInspector]public GameObject hitObj;
 
     [System.Serializable]
@@ -20,16 +21,27 @@ public class Damageable : MonoBehaviour,IDamageable {
 
     public void Damage(int amount)
     {
+        if (!isItSchild)
+            ReduceHealth(amount);
+
+        ShowEffects();
+        OnDamage.Invoke();
+       
+    }
+
+    void ReduceHealth(int amount)
+    {
         fullHealth -= amount;
         if (fullHealth <= 0)
         {
             fullHealth = 0;
         }
+    }
 
+    void ShowEffects()
+    {
         Destroy(hitObj, .1f);
         particleEffect.SetActive(true);
-        OnDamage.Invoke();
-       
     }
 
     public int GetFullHealth()

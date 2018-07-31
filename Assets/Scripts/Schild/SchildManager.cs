@@ -11,7 +11,7 @@ public class SchildManager : MonoBehaviour {
   
     ISchild iSchild;
   
-
+    public int playerNum;
 
     void Start ()
     {
@@ -25,6 +25,8 @@ public class SchildManager : MonoBehaviour {
         schildFactory = new SchildFactory();
         iSchild = schildFactory.GetSchild(schildType, current_schild);
         iSchild.ShieldSetUp();
+
+        Debug.Log("Player Num :" + playerNum);
     }
 
 
@@ -45,4 +47,8 @@ public class SchildManager : MonoBehaviour {
             iSchild.DeactivateSchild();
         }
     }
+
+
+    
+
 }

@@ -23,12 +23,12 @@ public class InstantSchild : MonoBehaviour,ISchild {
    
     public void DamageSchild(int amount)
     {
-        throw new System.NotImplementedException();
+      
     }
 
     public void HitBySchild(int amount)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void ShieldSetUp()
@@ -38,8 +38,7 @@ public class InstantSchild : MonoBehaviour,ISchild {
     
     }
 
-    
-
+   
     public void ActivateSchild()
     {
         if(Time.time -_lastSchildSpawnTime >= _coolDownTime && _isSchildActivated == false)

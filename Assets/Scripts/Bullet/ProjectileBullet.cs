@@ -39,6 +39,7 @@ public class ProjectileBullet : MonoBehaviour
     {
         targetedObj = target;
         _isMoving = true;
+      //  Debug.Log("Target Set");
     }
 
     void Update()
@@ -81,7 +82,7 @@ public class ProjectileBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        
         _isMoving = false;
 
         if (_isCollided == false)
@@ -90,15 +91,28 @@ public class ProjectileBullet : MonoBehaviour
             return;
 
         if (other.GetComponent<PlayerWeaponManager>() != null)
-        { 
+        {
             //Check Is it the owner of the player
             if (other.GetComponent<PlayerWeaponManager>().playerNum == playerNum)
             {
+             
                 _isMoving = true;
                 _isCollided = false;
                 return;
             }
         }
+
+        if (other.GetComponentInParent<SchildManager>() != null)
+        {
+            //Check is it schild first then check is it the same player schild
+            if (other.GetComponentInParent<SchildManager>().playerNum == playerNum){
+              
+                _isMoving = true;
+                _isCollided = false;
+                return;
+            }
+        }
+       
 
         Damageable damagable = other.GetComponent<Damageable>();
         if(damagable != null){
@@ -107,11 +121,11 @@ public class ProjectileBullet : MonoBehaviour
             damagable.hitObj = gameObject;
             damagable.Damage(damage);
        
-            Debug.Log("Damageable Found ");
+           // Debug.Log("Damageable Found ");
         }
         else
         {
-            Destroy(gameObject);
+           Destroy(gameObject);
         }
 
     }

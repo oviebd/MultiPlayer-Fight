@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4823616743410304}
   - component: {fileID: 114528289196606090}
+  - component: {fileID: 135006443057321380}
+  - component: {fileID: 114777252904566594}
   m_Layer: 9
   m_Name: Instant_Schild 1
   m_TagString: Untagged
@@ -37,14 +39,13 @@ GameObject:
   - component: {fileID: 4733574759874662}
   - component: {fileID: 33204397823494062}
   - component: {fileID: 23851595164513288}
-  - component: {fileID: 135249770039871760}
   m_Layer: 9
   m_Name: Schild
   m_TagString: Schild
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4733574759874662
 Transform:
   m_ObjectHideFlags: 1
@@ -129,15 +130,36 @@ MonoBehaviour:
   _schildObj: {fileID: 1839404471284614}
   _coolDownTime: 5
   _schildLifeTime: 2
---- !u!135 &135249770039871760
+--- !u!114 &114777252904566594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1791489993592346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376cf1e7a776b444888875eaf71b081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealth: 100
+  isDestructive: 0
+  isItSchild: 1
+  particleEffect: {fileID: 0}
+  hitObj: {fileID: 0}
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+InteractionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!135 &135006443057321380
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839404471284614}
+  m_GameObject: {fileID: 1791489993592346}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.9909463
+  m_Center: {x: -0.05, y: 0.7381269, z: -0.05810666}
