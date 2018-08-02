@@ -16,8 +16,8 @@ public class InstantSchild : MonoBehaviour,ISchild {
     void Awake () {
 
         _isSchildActivated = false;
-        _lastSchildSpawnTime = Time.time;
-   
+        _lastSchildSpawnTime =Time.time;
+        _schildObj.SetActive (false);
     }
 
    
@@ -34,7 +34,7 @@ public class InstantSchild : MonoBehaviour,ISchild {
     public void ShieldSetUp()
     {
         _isSchildActivated = false;
-        _lastSchildSpawnTime = Time.time;
+       _lastSchildSpawnTime =Time.time;
     
     }
 
@@ -53,7 +53,7 @@ public class InstantSchild : MonoBehaviour,ISchild {
 
     public void DeactivateSchild()
     {
-        Debug.Log("Deactive Schild called ");
+      //  Debug.Log("Deactive Schild called ");
         _lastSchildSpawnTime = Time.time;
         _isSchildActivated = false;
         _schildObj.SetActive(false);

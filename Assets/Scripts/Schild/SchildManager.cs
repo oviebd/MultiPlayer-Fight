@@ -26,7 +26,7 @@ public class SchildManager : MonoBehaviour {
         iSchild = schildFactory.GetSchild(schildType, current_schild);
         iSchild.ShieldSetUp();
 
-        Debug.Log("Player Num :" + playerNum);
+     //   Debug.Log("Player Num :" + playerNum);
     }
 
 
