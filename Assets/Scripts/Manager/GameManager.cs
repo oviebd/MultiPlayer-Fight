@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     private void SpawnAllPlayer()
     {
-        for (int i = 0; i < players.Length; i++)
+        for (int i =0; i < players.Length; i++)
         {
 
             players[i].m_Instance =

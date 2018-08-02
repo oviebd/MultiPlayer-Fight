@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SchildManager : MonoBehaviour {
+public class ShieldManager : MonoBehaviour {
 
-    SchildFactory schildFactory;
-    public Utility.SchildTypes schildType;
-    public GameObject schild_prefab;
-    GameObject current_schild;
-  
+    ShieldFactory shieldFactory;
+    public Utility.ShieldType shieldType;
+    public GameObject shield_prefab;
+    GameObject current_shield;
+
     ISchild iSchild;
   
     public int playerNum;
@@ -17,16 +17,18 @@ public class SchildManager : MonoBehaviour {
 
     void Start ()
     {
+       
         Init();
  	}
 	
 	void Init()
     {
-        current_schild =  Instantiate(schild_prefab, transform, false);
+        current_shield =  Instantiate(shield_prefab, transform, false);
      
-        schildFactory = new SchildFactory();
-        iSchild = schildFactory.GetSchild(schildType, current_schild);
+        shieldFactory = new ShieldFactory();
+        iSchild = shieldFactory.GetSchild(shieldType, current_shield);
         iSchild.ShieldSetUp();
+
         _shieldInput = _shieldInput+playerNum;
      //   Debug.Log("Player Num :" + playerNum);
     }
@@ -37,10 +39,11 @@ public class SchildManager : MonoBehaviour {
         iSchild.ActivateSchild();
     }
 
-    void SetUpInput()
+    public void DeactiveShield()
     {
-
+     
     }
+   
 
     void Update () {
 

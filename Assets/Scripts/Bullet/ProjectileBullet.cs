@@ -18,12 +18,13 @@ public class ProjectileBullet : MonoBehaviour
 
     public float nearestDistanceForTargetLose = 5.0f;
     public int damage = 20;
-    
+   
    
     void Start()
     {
         trail.SetActive(false);
         Destroy(gameObject, _destroyTime);
+       
         // _isMoving = false;
         _rb = GetComponent<Rigidbody>();
         Invoke("InstantiateTrail", .2f);
@@ -102,11 +103,11 @@ public class ProjectileBullet : MonoBehaviour
             }
         }
 
-        if (other.GetComponentInParent<SchildManager>() != null)
+        if (other.GetComponentInParent<ShieldManager>() != null)
         {
             //Debug.Log("Hit Schild Manager Hit player Num" + other.GetComponentInParent<SchildManager>().playerNum);
             //Check is it schild first then check is it the same player schild
-            if (other.GetComponentInParent<SchildManager>().playerNum == playerNum){
+            if (other.GetComponentInParent<ShieldManager>().playerNum == playerNum){
               
                 _isMoving = true;
                 _isCollided = false;
