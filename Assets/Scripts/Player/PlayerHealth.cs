@@ -18,13 +18,14 @@ public class PlayerHealth : MonoBehaviour {
 
     public void PlayerDamage()
     {
+        Debug.Log("Player Damage called in Player" + currentHealth);
         RetriveCurrentHealth();
         healthSlider.value = currentHealth;
         if (currentHealth <= 0)
         {
             Death();
         }
-       // Debug.Log("Player Damage called in Player");
+      
     }
 
     private void Death()

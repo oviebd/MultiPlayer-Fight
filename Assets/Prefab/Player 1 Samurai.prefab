@@ -3589,8 +3589,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915968166b869cb488afca2268192035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  schildType: 0
   schild_prefab: {fileID: 1791489993592346, guid: c4c225d8db21a054c803fedd2d5aa621,
     type: 2}
+  playerNum: 0
 --- !u!114 &114403805939416644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3751,6 +3753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullHealth: 100
   isDestructive: 0
+  isItSchild: 0
   particleEffect: {fileID: 0}
   hitObj: {fileID: 0}
   OnDamage:
@@ -3785,9 +3788,9 @@ MonoBehaviour:
   runSpeed: 6
   turnSmoothTime: 0.1
   speedSmoothTime: 0.1
-  dashSpeed: 2
+  dashSpeed: 40
   dash_Duration: 0.25
-  dash_SpeedMultiplier: 10
+  _dashCoolDownTime: 2
   trailRenderer: {fileID: 1513306419731294}
 --- !u!122 &122966938635798234
 Halo:

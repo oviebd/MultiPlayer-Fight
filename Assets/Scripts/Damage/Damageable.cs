@@ -21,11 +21,13 @@ public class Damageable : MonoBehaviour,IDamageable {
 
     public void Damage(int amount)
     {
-        if (!isItSchild)
-            ReduceHealth(amount);
-
-        ShowEffects();
         OnDamage.Invoke();
+        Debug.Log("Damage amount " + amount);
+       // if (!isItSchild)
+        //    ReduceHealth(amount);
+        ReduceHealth(amount);
+        ShowEffects();
+       
        
     }
 

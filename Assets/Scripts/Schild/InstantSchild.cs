@@ -46,7 +46,7 @@ public class InstantSchild : MonoBehaviour,ISchild {
             _isSchildActivated = true;
 
             _schildObj.SetActive(true);
-            Invoke("DeactivateSchild", 1.0f);
+            Invoke("DeactivateSchild", _schildLifeTime);
         }
        
     }

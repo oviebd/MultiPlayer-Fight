@@ -13,6 +13,8 @@ public class SchildManager : MonoBehaviour {
   
     public int playerNum;
 
+    private string _shieldInput= "Shield";
+
     void Start ()
     {
         Init();
@@ -25,7 +27,7 @@ public class SchildManager : MonoBehaviour {
         schildFactory = new SchildFactory();
         iSchild = schildFactory.GetSchild(schildType, current_schild);
         iSchild.ShieldSetUp();
-
+        _shieldInput = _shieldInput+playerNum;
      //   Debug.Log("Player Num :" + playerNum);
     }
 
@@ -35,16 +37,22 @@ public class SchildManager : MonoBehaviour {
         iSchild.ActivateSchild();
     }
 
+    void SetUpInput()
+    {
+
+    }
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.V))
+
+        if (Input.GetButtonDown(_shieldInput))
         {
             ActivateSchild();
         }
+        
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            iSchild.DeactivateSchild();
+         //   iSchild.DeactivateSchild();
         }
     }
 

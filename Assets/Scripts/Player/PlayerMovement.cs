@@ -34,8 +34,11 @@ public class PlayerMovement : MonoBehaviour
     bool dashing = false;
     float dash_Time;
     public float dash_Duration = 0.25f;
-    public float dash_SpeedMultiplier = 5;
+  
     Vector3 dash_Direction;
+
+    [SerializeField] float _dashCoolDownTime=3.0f;
+    float _lastDashTime;
 
     public GameObject trailRenderer;
 
@@ -56,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
         _horizontallInput = "Horizontal" + playerNum;
 
         m_Dash = "Dash" + playerNum;
+        _lastDashTime = Time.time;
+
     }
 
 
@@ -65,22 +70,41 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = Vector3.zero;
 
         inputData = new Vector2(Input.GetAxisRaw(_horizontallInput), Input.GetAxisRaw(_veryticalInput));
-        m_DashInput = Input.GetButtonDown(m_Dash);
+
+       
+        if (Input.GetButtonDown(m_Dash))
+        {
+            if (Time.time - _lastDashTime >= _dashCoolDownTime)
+            {
+                m_DashInput = true;
+                dashing = true;
+                Invoke("StopDashing",dash_Duration);
+                _lastDashTime = Time.time;
+            }
+        }
     }
 
+    void StopDashing()
+    {
+        m_DashInput = false;
+        dashing = false;
+        _rb.velocity = Vector3.zero;
+        _lastDashTime = Time.time;
+    }
     void FixedUpdate()
     {
         MovePlayer();
 
-        if (m_DashInput || dashing)
+        if (m_DashInput && dashing)
         {
+           // Debug.Log("Dash before");
             Dash();
+            
         }
     }
 
     void MovePlayer()
     {
-        
         Vector2 inputDir = inputData.normalized;
         bool isRotating = false;
 
@@ -117,9 +141,6 @@ public class PlayerMovement : MonoBehaviour
     bool CheckIsItRotating( float targetedRot, float currentRot)
     {
         float diff = targetedRot - currentRot;
-     //   Debug.Log(" Player Num : " + playerNum + " Diffecence : " + diff);
-      
-
         if ( Mathf.Abs(diff) == 0)
         {
             //Not Rotating now
@@ -130,7 +151,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Dash()
     {
-        if (!dashing)
+
+        dash_Direction = new Vector3(inputData.x, 0f, inputData.y).normalized;
+        if (dash_Direction == Vector3.zero)
+            dash_Direction = transform.forward;
+        trailRenderer.SetActive(true);
+
+        //  transform.Translate(dash_Direction  * dashSpeed * Time.deltaTime, Space.World);
+        _rb.velocity = dash_Direction * dashSpeed;
+
+      /*  if (!dashing)
         {
             dashing = true;
 
@@ -157,6 +187,6 @@ public class PlayerMovement : MonoBehaviour
             _rb.velocity = Vector3.zero;
 
             trailRenderer.SetActive(false);
-        }
+        }*/
     }
 }

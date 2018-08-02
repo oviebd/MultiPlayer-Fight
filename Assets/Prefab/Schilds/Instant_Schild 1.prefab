@@ -128,8 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   schildType: 0
   _schildObj: {fileID: 1839404471284614}
-  _coolDownTime: 5
-  _schildLifeTime: 2
+  _coolDownTime: 2
+  _schildLifeTime: 0.5
 --- !u!114 &114777252904566594
 MonoBehaviour:
   m_ObjectHideFlags: 1

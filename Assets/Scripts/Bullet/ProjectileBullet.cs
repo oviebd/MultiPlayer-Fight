@@ -104,6 +104,7 @@ public class ProjectileBullet : MonoBehaviour
 
         if (other.GetComponentInParent<SchildManager>() != null)
         {
+            //Debug.Log("Hit Schild Manager Hit player Num" + other.GetComponentInParent<SchildManager>().playerNum);
             //Check is it schild first then check is it the same player schild
             if (other.GetComponentInParent<SchildManager>().playerNum == playerNum){
               
