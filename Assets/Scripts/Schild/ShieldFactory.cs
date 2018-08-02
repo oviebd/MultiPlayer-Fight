@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SchildFactory {
+public class ShieldFactory {
 
-    public ISchild GetSchild(Utility.SchildTypes schildType,GameObject schildObj)
+    public ISchild GetSchild(Utility.ShieldType schildType,GameObject schildObj)
     {
 
         switch (schildType)
         {
-            case Utility.SchildTypes.InstantSchild:
+            case Utility.ShieldType.InstantSchild:
                 InstantSchild instantSchild = schildObj.GetComponent<InstantSchild>();
              
                 return  instantSchild;
 
-            case Utility.SchildTypes.PowerSchild:
+            case Utility.ShieldType.PowerSchild:
                 return new PowerSchild();
 
             default:

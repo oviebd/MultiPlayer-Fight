@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Utility {
 
-	public enum SchildTypes
+	public enum ShieldType
     {
         InstantSchild,
         PowerSchild

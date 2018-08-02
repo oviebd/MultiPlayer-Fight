@@ -13,7 +13,7 @@ public class PlayerManager
 
     private PlayerMovement _movement;
     private PlayerWeaponManager _playerWeaponManager;
-    private SchildManager _schildManager;
+    private ShieldManager _schildManager;
 
     private List<Color> PlayerColors = new List<Color>();
     
@@ -23,7 +23,7 @@ public class PlayerManager
     {
         _movement = m_Instance.GetComponent<PlayerMovement>();
         _playerWeaponManager = m_Instance.GetComponent<PlayerWeaponManager>();
-        _schildManager= m_Instance.GetComponentInChildren<SchildManager>();
+        _schildManager= m_Instance.GetComponentInChildren<ShieldManager>();
 
 
         _movement.playerNum = playerNum;
