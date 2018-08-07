@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         inputData = new Vector2(Input.GetAxisRaw(_horizontallInput), Input.GetAxisRaw(_veryticalInput));
 
        
-        if (Input.GetButtonDown(m_Dash))
+      /*  if (Input.GetButtonDown(m_Dash))
         {
             if (Time.time - _lastDashTime >= _dashCoolDownTime)
             {
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("StopDashing",dash_Duration);
                 _lastDashTime = Time.time;
             }
-        }
+        }*/
     }
 
     void StopDashing()
@@ -95,12 +95,12 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer();
 
-        if (m_DashInput && dashing)
+       /* if (m_DashInput && dashing)
         {
            // Debug.Log("Dash before");
             Dash();
             
-        }
+        }*/
     }
 
     void MovePlayer()

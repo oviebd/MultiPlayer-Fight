@@ -3554,7 +3554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gunPos: {fileID: 4495094199736328}
-  _bulletCoolDownTime: 0.5
+  _bulletCoolDownTime: 0
   _bulletPrefab: {fileID: 1504255251150248, guid: 4b963c24e6e43de42a89e1e9c55ebc76,
     type: 2}
   viewRadious: 60
@@ -3784,7 +3784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
-  walkSpeed: 16
+  walkSpeed: 10
   runSpeed: 6
   turnSmoothTime: 0.1
   speedSmoothTime: 0.1

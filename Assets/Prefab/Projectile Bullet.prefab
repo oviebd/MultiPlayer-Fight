@@ -459,10 +459,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 0
-  _movingSpeed: 30
+  _movingSpeed: 35
   _hitParticle: {fileID: 1681135718779740}
   _destroyTime: 5
   trail: {fileID: 1691342467569810}
+  nearestDistanceForTargetLose: 5
   damage: 20
 --- !u!122 &122865193349209056
 Halo:
