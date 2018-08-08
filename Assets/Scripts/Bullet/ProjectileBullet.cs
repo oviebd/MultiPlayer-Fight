@@ -31,7 +31,7 @@ public class ProjectileBullet : MonoBehaviour
        
         // _isMoving = false;
         _rb = GetComponent<Rigidbody>();
-        Invoke("InstantiateTrail", .2f);
+        Invoke("InstantiateTrail", 0.0f);
         _spawnPosition = transform.position;
     }
 

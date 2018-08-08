@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     float speedSmoothVelocity;
     float currentSpeed;
 
+    private float _horizontalValue;
+    private float _verticalValue;
+    private float _maxValueForMoveInput=.8f;
+    private bool _isRotate;
+
     private Rigidbody _rb;
     Animator _anim;
     private string _speed_anim = "Speed";
@@ -51,10 +56,10 @@ public class PlayerMovement : MonoBehaviour
         _veryticalInput = "Vertical" + playerNum;
         _horizontallInput = "Horizontal" + playerNum;
 
+       
         _dashInput = "Dash" + playerNum;
         _prevDashTime = Time.time;
         _dashing = false;
-
     }
 
 
@@ -62,8 +67,11 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb.angularVelocity = Vector3.zero;
         _rb.velocity = Vector3.zero;
-
-        inputData = new Vector2(Input.GetAxisRaw(_horizontallInput), Input.GetAxisRaw(_veryticalInput));
+      
+        _horizontalValue = Input.GetAxis(_horizontallInput);
+        _verticalValue = Input.GetAxis(_veryticalInput);
+        Debug.Log("Vertical Value " + _verticalValue);
+        inputData = new Vector2(_horizontalValue,_verticalValue);
 
        
         if (Input.GetButtonDown(_dashInput) && _dashing == false)
@@ -107,10 +115,19 @@ public class PlayerMovement : MonoBehaviour
 
          currentSpeed = Mathf.SmoothDamp(currentSpeed, walkSpeed * inputDir.magnitude, ref speedSmoothVelocity, speedSmoothTime);
 
-         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+        transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
-         //  float animationSpeed = (running ? 3.0f : 6.5f) * inputDir.magnitude;
-         float animationSpeed = 8.0f * inputDir.magnitude;
+        if ( (_horizontalValue >=- _maxValueForMoveInput && _horizontalValue <= _maxValueForMoveInput) ||
+            (_verticalValue >= -_maxValueForMoveInput && _verticalValue <= _maxValueForMoveInput)
+           )
+        {
+           
+        }
+       
+     
+
+        //  float animationSpeed = (running ? 3.0f : 6.5f) * inputDir.magnitude;
+        float animationSpeed = 8.0f * inputDir.magnitude;
          _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
      }
 

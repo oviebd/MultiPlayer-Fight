@@ -982,7 +982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1556404768626260
 GameObject:
   m_ObjectHideFlags: 1
@@ -1192,7 +1192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1687080827211278
 GameObject:
   m_ObjectHideFlags: 1
@@ -3442,7 +3442,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1555166810039250}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.5244755, b: 0, a: 1}
@@ -3558,9 +3558,9 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 1504255251150248, guid: 4b963c24e6e43de42a89e1e9c55ebc76,
     type: 2}
   viewRadious: 60
-  viewAngle: 66
+  viewAngle: 60
   _bulletNumberinChamber: 5
-  _bulletCoolDownTime: 1
+  _bulletCoolDownTime: 0.5
 --- !u!114 &114328864718769598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3786,11 +3786,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
-  walkSpeed: 10
+  walkSpeed: 15
   speedSmoothTime: 0.1
   dashSpeed: 40
   _dash_Duration: 0.25
-  _dashCoolDownTime: 2
+  _dashCoolDownTime: 3
   _dashTrail: {fileID: 1513306419731294}
 --- !u!122 &122577332324665426
 Halo:

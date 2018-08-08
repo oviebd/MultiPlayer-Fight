@@ -46,15 +46,14 @@ public class InstantSchild : MonoBehaviour,ISchild {
    
     public void ActivateSchild()
     {
-        _collider.enabled = true;
         if (Time.time -_lastShieldSpawnTime >= _coolDownTime && _isShieldActivated == false)
         {
+            _collider.enabled = true;
             _isShieldActivated = true;
 
             _shieldObj.SetActive(true);
             Invoke("DeactivateSchild", _shieldLifeTime);
         }
-       
     }
 
     public void DeactivateSchild()

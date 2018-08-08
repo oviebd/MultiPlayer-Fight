@@ -77,7 +77,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4666522772675424}
-  - component: {fileID: 108145098421621148}
   m_Layer: 8
   m_Name: Point light
   m_TagString: Untagged
@@ -131,9 +130,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504255251150248}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.19500068}
-  m_LocalScale: {x: 0.05000004, y: 0.050000004, z: 0.50000036}
+  m_LocalRotation: {x: -0, y: -0.97721565, z: -0, w: -0.21224889}
+  m_LocalPosition: {x: -13.620671, y: 0, z: 0.93690896}
+  m_LocalScale: {x: 0.10000011, y: 0.10000001, z: 1}
   m_Children:
   - {fileID: 4107221767684972}
   - {fileID: 4126996244718704}
@@ -392,42 +391,6 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
---- !u!108 &108145098421621148
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1981554306384598}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 0.5244755, b: 0, a: 1}
-  m_Intensity: 5.7
-  m_Range: 5
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!114 &114092046737585054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -465,6 +428,7 @@ MonoBehaviour:
   trail: {fileID: 1691342467569810}
   nearestDistanceForTargetLose: 5
   damage: 20
+  _maxRange: 20
 --- !u!122 &122865193349209056
 Halo:
   m_ObjectHideFlags: 1

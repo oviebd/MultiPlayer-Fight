@@ -51,12 +51,7 @@ public class ShieldManager : MonoBehaviour {
         {
             ActivateSchild();
         }
-        
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-         //   iSchild.DeactivateSchild();
-        }
     }
 
 

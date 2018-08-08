@@ -15,8 +15,7 @@ public class ProjectileBasedWeapon : MonoBehaviour
     private FieldOfViewHelper _fieldOfViewHelper;
 
     public float viewRadious;
-    [Range(0, 360)]
-    public float viewAngle;
+    [Range(0, 360)] public float viewAngle;
 
     // CoolDown
     [SerializeField] private int _bulletNumberinChamber=5; 
