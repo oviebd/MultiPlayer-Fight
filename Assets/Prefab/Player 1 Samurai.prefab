@@ -3558,7 +3558,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 1504255251150248, guid: 4b963c24e6e43de42a89e1e9c55ebc76,
     type: 2}
   viewRadious: 60
-  viewAngle: 60
+  viewAngle: 80
   _bulletNumberinChamber: 5
   _bulletCoolDownTime: 0.5
 --- !u!114 &114328864718769598
@@ -3573,7 +3573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _viewRadious: 40
-  _viewAngle: 60
+  _viewAngle: 80
   targetMask:
     serializedVersion: 2
     m_Bits: 512
