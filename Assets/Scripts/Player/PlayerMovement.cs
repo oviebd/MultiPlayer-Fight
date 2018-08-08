@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float _horizontalValue;
     private float _verticalValue;
-    private float _maxValueForMoveInput=.8f;
+    private float _maxValueForMoveInput=0.7f;
     private bool _isRotate;
 
     private Rigidbody _rb;
@@ -115,20 +115,21 @@ public class PlayerMovement : MonoBehaviour
 
          currentSpeed = Mathf.SmoothDamp(currentSpeed, walkSpeed * inputDir.magnitude, ref speedSmoothVelocity, speedSmoothTime);
 
-        transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+       
 
-        if ( (_horizontalValue >=- _maxValueForMoveInput && _horizontalValue <= _maxValueForMoveInput) ||
-            (_verticalValue >= -_maxValueForMoveInput && _verticalValue <= _maxValueForMoveInput)
+        if ( (_horizontalValue <=- _maxValueForMoveInput || _horizontalValue >= _maxValueForMoveInput) ||
+            (_verticalValue <= -_maxValueForMoveInput || _verticalValue >= _maxValueForMoveInput)
            )
         {
-           
+            transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+            float animationSpeed = 8.0f * inputDir.magnitude;
+          //  _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
         }
        
      
 
         //  float animationSpeed = (running ? 3.0f : 6.5f) * inputDir.magnitude;
-        float animationSpeed = 8.0f * inputDir.magnitude;
-         _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
+      
      }
 
 
