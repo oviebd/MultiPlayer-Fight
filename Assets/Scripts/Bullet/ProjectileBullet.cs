@@ -18,8 +18,12 @@ public class ProjectileBullet : MonoBehaviour
 
     public float nearestDistanceForTargetLose = 5.0f;
     public int damage = 20;
-   
-   
+
+    //For Range
+    [SerializeField] private float _maxRange = 1.0f;
+    private Vector3 _spawnPosition;
+
+
     void Start()
     {
         trail.SetActive(false);
@@ -28,7 +32,7 @@ public class ProjectileBullet : MonoBehaviour
         // _isMoving = false;
         _rb = GetComponent<Rigidbody>();
         Invoke("InstantiateTrail", .2f);
-
+        _spawnPosition = transform.position;
     }
 
     void InstantiateTrail()
@@ -47,6 +51,8 @@ public class ProjectileBullet : MonoBehaviour
     {
         if (_isMoving)
         {
+            Checkrange();
+
             if (targetedObj != null)
                 MoveTowardsATarget();
             else
@@ -54,6 +60,17 @@ public class ProjectileBullet : MonoBehaviour
         }
     }
 
+    void Checkrange()
+    {
+        float distance = (Vector3.Distance(transform.position, _spawnPosition));
+       // Debug.Log("Travelled Distance : " + distance);
+        if (distance >= _maxRange)
+        {
+            //Debug.Log("Futush ");
+            Destroy(gameObject);
+            _isMoving = false;
+        }
+    }
 
     void MoveTowardsATarget()
     {

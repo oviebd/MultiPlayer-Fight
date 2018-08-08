@@ -4,7 +4,6 @@ public class ProjectileBasedWeapon : MonoBehaviour
 {
 
     [SerializeField] public Transform _gunPos;
-    [SerializeField] float _bulletCoolDownTime = 0.5f;
     [SerializeField] GameObject _bulletPrefab;
 
     private int _playerNum;
@@ -19,6 +18,10 @@ public class ProjectileBasedWeapon : MonoBehaviour
     [Range(0, 360)]
     public float viewAngle;
 
+    // CoolDown
+    [SerializeField] private int _bulletNumberinChamber=5; 
+    private int _remainingBulletInChamber;
+    [SerializeField] float _bulletCoolDownTime = 0.5f;
 
     void Start()
     {
@@ -26,41 +29,48 @@ public class ProjectileBasedWeapon : MonoBehaviour
         _fieldOfViewHelper = gameObject.GetComponent<FieldOfViewHelper>();
 
         _playerNum = _playerWeaponManager.playerNum;
-      //  Debug.Log("Player Num  in fire : "  + _playerNum);
+        _remainingBulletInChamber = _bulletNumberinChamber;
+        //  Debug.Log("Player Num  in fire : "  + _playerNum);
         _prevBulletSpawnTime = Time.time;
         _fireBtn = "P" + _playerNum + "Attack1";
+
     }
 
 
     void Update()
     {
+        CheckBulletInput();
+       
+    }
+
+    void CheckBulletInput()
+    {
         if (Input.GetButtonDown(_fireBtn))
         {
-            if (Time.time - _prevBulletSpawnTime >= _bulletCoolDownTime)
+            if (_remainingBulletInChamber > 0)
+                SpawnBulletAndCheckBulletDestination();
+            else
             {
-                _prevBulletSpawnTime = Time.time;
-                //Debug.Log("Fire Pressed");
-               // SpawnBullet(_gunPos);
-                CheckDestination();
+                if (Time.time - _prevBulletSpawnTime >= _bulletCoolDownTime)
+                {
+                    _remainingBulletInChamber = _bulletNumberinChamber;
+                    SpawnBulletAndCheckBulletDestination();
+                }
             }
         }
     }
 
-
-    void CheckDestination()
+    void SpawnBulletAndCheckBulletDestination()
     {
+        _prevBulletSpawnTime = Time.time;
+        _remainingBulletInChamber--;
 
         Transform hitObjTransform = _fieldOfViewHelper.GetNearestObj(viewRadious, viewAngle);
-
         if (hitObjTransform != null)
-        {
             InstantiateBullet(hitObjTransform.gameObject);
-        }
         else
-        {
-
             InstantiateBullet(null);
-        }
+        
     }
 
 

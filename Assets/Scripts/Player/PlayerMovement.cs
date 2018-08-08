@@ -2,48 +2,41 @@
 
 public class PlayerMovement : MonoBehaviour
 {
+    // public float turnSmoothTime = 0.2f;
+    //float turnSmoothVelocity;
+
     //Player Setting
     [HideInInspector]  public int playerNum;
     private string _veryticalInput;
     private string _horizontallInput;
 
-
-    private Rigidbody _rb;
-
     //Move 
     Vector2 inputData = new Vector2();
     public float walkSpeed = 2;
-    public float runSpeed = 6;
-
-    public float turnSmoothTime = 0.2f;
-    float turnSmoothVelocity;
 
     public float speedSmoothTime = 0.1f;
     float speedSmoothVelocity;
     float currentSpeed;
 
+    private Rigidbody _rb;
     Animator _anim;
     private string _speed_anim = "Speed";
 
 
     //Dash
-    public float dashSpeed = 2.0f;
-    string m_Dash;
-    bool m_DashInput;
+    [SerializeField] private float dashSpeed = 2.0f;
+    [SerializeField] private float _dash_Duration = 0.25f;
+    [SerializeField] private float _dashCoolDownTime = 3.0f;
+    [SerializeField] private GameObject _dashTrail;
+    string _dashInput;
+    
+    private bool _dashing = false;
+    private float _prevDashTime;
+    private Vector3 dash_Direction;
+   
 
-    bool dashing = false;
-    float dash_Time;
-    public float dash_Duration = 0.25f;
-  
-    Vector3 dash_Direction;
+   
 
-    [SerializeField] float _dashCoolDownTime=3.0f;
-    float _lastDashTime;
-
-    public GameObject trailRenderer;
-
-
-  
 
     void Awake()
     {
@@ -58,8 +51,9 @@ public class PlayerMovement : MonoBehaviour
         _veryticalInput = "Vertical" + playerNum;
         _horizontallInput = "Horizontal" + playerNum;
 
-        m_Dash = "Dash" + playerNum;
-        _lastDashTime = Time.time;
+        _dashInput = "Dash" + playerNum;
+        _prevDashTime = Time.time;
+        _dashing = false;
 
     }
 
@@ -72,82 +66,55 @@ public class PlayerMovement : MonoBehaviour
         inputData = new Vector2(Input.GetAxisRaw(_horizontallInput), Input.GetAxisRaw(_veryticalInput));
 
        
-      /*  if (Input.GetButtonDown(m_Dash))
+        if (Input.GetButtonDown(_dashInput) && _dashing == false)
         {
-            if (Time.time - _lastDashTime >= _dashCoolDownTime)
+            if (Time.time - _prevDashTime >= _dashCoolDownTime)
             {
-                m_DashInput = true;
-                dashing = true;
-                Invoke("StopDashing",dash_Duration);
-                _lastDashTime = Time.time;
+                _dashing = true;
+                _prevDashTime = Time.time;
+                Invoke("StopDashing",_dash_Duration);
             }
-        }*/
+        }
+
+       
     }
 
     void StopDashing()
     {
-        m_DashInput = false;
-        dashing = false;
-        _rb.velocity = Vector3.zero;
-        _lastDashTime = Time.time;
+        _dashing = false;
+        _prevDashTime = Time.time;
+        _rb.velocity = Vector3.zero;   
     }
+
     void FixedUpdate()
     {
         MovePlayer();
 
-       /* if (m_DashInput && dashing)
-        {
-           // Debug.Log("Dash before");
-            Dash();
-            
-        }*/
+        if (_dashing == true)
+           Dash();
     }
 
-    void MovePlayer()
-    {
-        Vector2 inputDir = inputData.normalized;
-        bool isRotating = false;
+     void MovePlayer()
+     {
+         Vector2 inputDir = inputData.normalized;
+         if (inputDir != Vector2.zero)
+         {
+             float targetRotation = (Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg) ;
+             // subtract 90 because samurai plane007's rotation is not zero.
+             transform.eulerAngles = Vector3.up * (Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg);
+             //  transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
+         }
 
-        if (inputDir != Vector2.zero)
-        {
-            float targetRotation = (Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg) ;
+         currentSpeed = Mathf.SmoothDamp(currentSpeed, walkSpeed * inputDir.magnitude, ref speedSmoothVelocity, speedSmoothTime);
 
-           isRotating = CheckIsItRotating(targetRotation, transform.eulerAngles.y*Mathf.Rad2Deg);
-            // subtract 90 because samurai plane007's rotation is not zero.
-            transform.eulerAngles = Vector3.up * (Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg);
-            //  transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
-        }
+         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
-        
-        bool running = Input.GetKey(KeyCode.LeftShift);
+         //  float animationSpeed = (running ? 3.0f : 6.5f) * inputDir.magnitude;
+         float animationSpeed = 8.0f * inputDir.magnitude;
+         _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
+     }
 
-        float targetSpeed = (running ? runSpeed : walkSpeed) * inputDir.magnitude;
-        currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
 
-        if (isRotating == true)
-        {
-           // currentSpeed = 0.0f;
-        }
-
-        transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
-
-        //  float animationSpeed = (running ? 3.0f : 6.5f) * inputDir.magnitude;
-        float animationSpeed = 8.0f * inputDir.magnitude;
-        _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
-    }
-
-  
-
-    bool CheckIsItRotating( float targetedRot, float currentRot)
-    {
-        float diff = targetedRot - currentRot;
-        if ( Mathf.Abs(diff) == 0)
-        {
-            //Not Rotating now
-            return false;
-        }else
-            return true;
-    }
 
     void Dash()
     {
@@ -155,38 +122,9 @@ public class PlayerMovement : MonoBehaviour
         dash_Direction = new Vector3(inputData.x, 0f, inputData.y).normalized;
         if (dash_Direction == Vector3.zero)
             dash_Direction = transform.forward;
-        trailRenderer.SetActive(true);
+        _dashTrail.SetActive(true);
 
         //  transform.Translate(dash_Direction  * dashSpeed * Time.deltaTime, Space.World);
         _rb.velocity = dash_Direction * dashSpeed;
-
-      /*  if (!dashing)
-        {
-            dashing = true;
-
-            dash_Direction = new Vector3(inputData.x, 0f, inputData.y).normalized;
-            if (dash_Direction == Vector3.zero)
-                dash_Direction = transform.forward;
-
-            dash_Time = 0;
-
-            trailRenderer.SetActive(true);
-
-           // Debug.Log(m_DashInput);
-        }
-
-        dash_Time += Time.deltaTime;
-
-      //  transform.Translate(dash_Direction  * dashSpeed * Time.deltaTime, Space.World);
-        _rb.velocity = dash_Direction * dash_SpeedMultiplier * dashSpeed;
-
-        if (dash_Time >= dash_Duration && dashing)
-        {
-            dashing = false;
-
-            _rb.velocity = Vector3.zero;
-
-            trailRenderer.SetActive(false);
-        }*/
     }
 }

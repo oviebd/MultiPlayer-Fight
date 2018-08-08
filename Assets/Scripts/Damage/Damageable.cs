@@ -22,7 +22,7 @@ public class Damageable : MonoBehaviour,IDamageable {
     public void Damage(int amount)
     {
         OnDamage.Invoke();
-        Debug.Log("Damage amount " + amount);
+      //  Debug.Log("Damage amount " + amount);
        // if (!isItSchild)
         //    ReduceHealth(amount);
         ReduceHealth(amount);
