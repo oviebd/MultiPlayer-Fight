@@ -35,3 +35,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Assets/Prefab/Player 1 Samurai.prefab
+Assets/Scene/Prototype v0.1/Stage v0.1.unity
+*.unity
