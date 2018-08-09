@@ -5,6 +5,7 @@ public class ProjectileBasedWeapon : MonoBehaviour
 
     [SerializeField] public Transform _gunPos;
     [SerializeField] GameObject _bulletPrefab;
+    [SerializeField] SliderController _projectileBulletSlider;
 
     private int _playerNum;
 
@@ -32,7 +33,6 @@ public class ProjectileBasedWeapon : MonoBehaviour
         //  Debug.Log("Player Num  in fire : "  + _playerNum);
         _prevBulletSpawnTime = Time.time;
         _fireBtn = "P" + _playerNum + "Attack1";
-
     }
 
 
@@ -47,13 +47,16 @@ public class ProjectileBasedWeapon : MonoBehaviour
         if (Input.GetButtonDown(_fireBtn))
         {
             if (_remainingBulletInChamber > 0)
+            {
                 SpawnBulletAndCheckBulletDestination();
+            }
             else
             {
                 if (Time.time - _prevBulletSpawnTime >= _bulletCoolDownTime)
                 {
                     _remainingBulletInChamber = _bulletNumberinChamber;
                     SpawnBulletAndCheckBulletDestination();
+                    _projectileBulletSlider.OnCooldown(_bulletCoolDownTime);
                 }
             }
         }
@@ -61,6 +64,7 @@ public class ProjectileBasedWeapon : MonoBehaviour
 
     void SpawnBulletAndCheckBulletDestination()
     {
+       
         _prevBulletSpawnTime = Time.time;
         _remainingBulletInChamber--;
 

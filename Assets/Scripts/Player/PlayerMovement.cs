@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _dash_Duration = 0.25f;
     [SerializeField] private float _dashCoolDownTime = 3.0f;
     [SerializeField] private GameObject _dashTrail;
+    [SerializeField] private SliderController _dashSlider;
     string _dashInput;
     
     private bool _dashing = false;
@@ -91,7 +92,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _dashing = false;
         _prevDashTime = Time.time;
-        _rb.velocity = Vector3.zero;   
+        _rb.velocity = Vector3.zero;
+        _dashSlider.OnCooldown(_dashCoolDownTime);
     }
 
     void FixedUpdate()

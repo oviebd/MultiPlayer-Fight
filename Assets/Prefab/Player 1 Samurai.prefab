@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224200443333505570}
   - component: {fileID: 222162790886466236}
-  - component: {fileID: 114023337277030912}
+  - component: {fileID: 114233233846116698}
   m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224504682573251270}
   - component: {fileID: 222249645424446510}
-  - component: {fileID: 114450513677876216}
+  - component: {fileID: 114839265371622618}
   m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
@@ -1137,7 +1137,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4235846364571906}
-  - component: {fileID: 114070607635091842}
+  - component: {fileID: 114207698980596876}
+  - component: {fileID: 114023337277030912}
   m_Layer: 9
   m_Name: Melee Weapon Manager
   m_TagString: Untagged
@@ -1588,8 +1589,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4093775327773044}
   - component: {fileID: 95064644998401002}
-  - component: {fileID: 114422952491946630}
+  - component: {fileID: 114763777273069912}
   - component: {fileID: 65958046009030604}
+  - component: {fileID: 114450513677876216}
   m_Layer: 9
   m_Name: MeleeType1
   m_TagString: Untagged
@@ -2392,7 +2394,7 @@ Transform:
   m_Children:
   - {fileID: 4093775327773044}
   m_Father: {fileID: 4017125766100050}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4238861490806794
 Transform:
@@ -3938,16 +3940,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-
---- !u!114 &114070607635091842
-
 --- !u!114 &114023337277030912
-
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-
   m_GameObject: {fileID: 1570612434168054}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3956,31 +3953,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meleeWeaponPrefab: {fileID: 1030740608454944, guid: 591386df54a9270448c2fb1a00f7a9f8,
     type: 2}
+  _meleeSlider: {fileID: 114463103143976226}
   _meleeCoolDownTime: 1
-
-  m_GameObject: {fileID: 1124344758493968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a64c0dcee4324e24bbe9eef44dea67ed, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-
 --- !u!114 &114093510048405896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4063,6 +4037,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f7fe47bbcca064384bf2e7714cbdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114207698980596876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570612434168054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114219411254754210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4083,6 +4068,33 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 484538fceececf14c9b43a463f00d148, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114233233846116698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1124344758493968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3137255}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: a64c0dcee4324e24bbe9eef44dea67ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4169,6 +4181,7 @@ MonoBehaviour:
   _gunPos: {fileID: 4495094199736328}
   _bulletPrefab: {fileID: 1504255251150248, guid: 4b963c24e6e43de42a89e1e9c55ebc76,
     type: 2}
+  _projectileBulletSlider: {fileID: 114934392459063962}
   viewRadious: 60
   viewAngle: 80
   _bulletNumberinChamber: 5
@@ -4203,6 +4216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915968166b869cb488afca2268192035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _shieldSlider: {fileID: 114257639092511248}
   shieldType: 0
   shield_prefab: {fileID: 1791489993592346, guid: c4c225d8db21a054c803fedd2d5aa621,
     type: 2}
@@ -4244,16 +4258,11 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-
---- !u!114 &114422952491946630
-
 --- !u!114 &114450513677876216
-
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-
   m_GameObject: {fileID: 1836454008593940}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4261,29 +4270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerHit: 30
-
-  m_GameObject: {fileID: 1169040945243924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a64c0dcee4324e24bbe9eef44dea67ed, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 1
-  m_FillAmount: 1
-  m_FillClockwise: 0
-  m_FillOrigin: 0
 --- !u!114 &114458851225497998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4343,7 +4329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f7fe47bbcca064384bf2e7714cbdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
 --- !u!114 &114496918951313464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4711,6 +4696,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 0
+--- !u!114 &114763777273069912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836454008593940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114774625475608366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4727,6 +4723,33 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114839265371622618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169040945243924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: a64c0dcee4324e24bbe9eef44dea67ed, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 1
+  m_FillClockwise: 0
+  m_FillOrigin: 0
 --- !u!114 &114930197220960488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4804,6 +4827,7 @@ MonoBehaviour:
   _dash_Duration: 0.25
   _dashCoolDownTime: 3
   _dashTrail: {fileID: 1513306419731294}
+  _dashSlider: {fileID: 114159203219169754}
 --- !u!122 &122577332324665426
 Halo:
   m_ObjectHideFlags: 1

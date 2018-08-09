@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShieldManager : MonoBehaviour {
 
+    [SerializeField] private SliderController _shieldSlider;
+
     ShieldFactory shieldFactory;
     public Utility.ShieldType shieldType;
     public GameObject shield_prefab;
@@ -27,8 +29,8 @@ public class ShieldManager : MonoBehaviour {
      
         shieldFactory = new ShieldFactory();
         iSchild = shieldFactory.GetSchild(shieldType, current_shield);
-        iSchild.ShieldSetUp();
-
+        iSchild.ShieldSetUp(_shieldSlider);
+        
         _shieldInput = _shieldInput+playerNum;
      //   Debug.Log("Player Num :" + playerNum);
     }

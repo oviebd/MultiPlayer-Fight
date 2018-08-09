@@ -5,6 +5,8 @@ using UnityEngine;
 public class MeleeWeaponManager : MonoBehaviour {
 
     [SerializeField] private GameObject _meleeWeaponPrefab;
+    [SerializeField] private SliderController _meleeSlider;
+
     private MeleeWeaponBehaviour _meleeBehaviour;
 
     private PlayerWeaponManager _playerWeaponManager;
@@ -24,13 +26,14 @@ public class MeleeWeaponManager : MonoBehaviour {
         _playerNum = _playerWeaponManager.playerNum;
 
         _prevMeleeTime = Time.time;
-        _meleeBtn = "P" + _playerNum + "melee";
+        _meleeBtn ="Melee" + _playerNum;
 
     }
 
     void ActivateMeleeAttack()
     {
         _prevMeleeTime = Time.time;
+        _meleeSlider.OnCooldown(_meleeCoolDownTime);
         _meleeBehaviour.StartAttack();
     }
 
@@ -46,7 +49,7 @@ public class MeleeWeaponManager : MonoBehaviour {
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetButtonDown(_meleeBtn))
         {
             if( (Time.time - _prevMeleeTime) >= _meleeCoolDownTime)
             {

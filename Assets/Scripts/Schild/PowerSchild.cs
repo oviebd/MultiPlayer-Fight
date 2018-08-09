@@ -23,7 +23,7 @@ public class PowerSchild : MonoBehaviour,ISchild {
         throw new System.NotImplementedException();
     }
 
-    public void ShieldSetUp()
+    public void ShieldSetUp(SliderController coolDownSlider)
     {
         throw new System.NotImplementedException();
     }

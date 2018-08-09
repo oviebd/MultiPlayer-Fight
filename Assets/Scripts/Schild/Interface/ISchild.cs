@@ -8,5 +8,5 @@ public interface ISchild {
     void DeactivateSchild();
     void DamageSchild(int amount);
     void HitBySchild(int amount);
-    void ShieldSetUp();
+    void ShieldSetUp(SliderController coolDownSlider);
 }

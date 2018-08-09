@@ -14,6 +14,7 @@ public class InstantSchild : MonoBehaviour,ISchild {
     bool  _isShieldActivated;
 
     private Collider _collider;
+    private SliderController _shieldCooldownSlider;
 
     void Awake () {
 
@@ -36,11 +37,11 @@ public class InstantSchild : MonoBehaviour,ISchild {
         
     }
 
-    public void ShieldSetUp()
+    public void ShieldSetUp(SliderController coolDownSlider)
     {
         _isShieldActivated = false;
        _lastShieldSpawnTime =Time.time;
-    
+        _shieldCooldownSlider = coolDownSlider;
     }
 
    
@@ -61,9 +62,10 @@ public class InstantSchild : MonoBehaviour,ISchild {
         _collider.enabled = false;
         //  Debug.Log("Deactive Schild called ");
         _lastShieldSpawnTime = Time.time;
+        _shieldCooldownSlider.OnCooldown(_coolDownTime);
         _isShieldActivated = false;
         _shieldObj.SetActive(false);
-
+      
         GetComponentInParent<ShieldManager>().DeactiveShield();
     }
 }

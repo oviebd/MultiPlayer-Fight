@@ -24,7 +24,7 @@ public class SliderController : MonoBehaviour
             image.enabled = false;
         }
 
-        OnCooldown(10f);
+       // OnCooldown(10f);
 	}
 	
 	// Update is called once per frame
