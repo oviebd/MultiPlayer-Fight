@@ -9698,7 +9698,7 @@ Transform:
   m_Father: {fileID: 1380807119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -87.532005}
->>>>>>> 65bdb8e8862ea09bbfcac22e5cece0699e3df1b2
+
 --- !u!4 &844769221 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4742766189919660, guid: 05da638b5b6c071439efdbe92ce544cb,
