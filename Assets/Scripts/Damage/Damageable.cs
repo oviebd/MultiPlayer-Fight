@@ -42,8 +42,12 @@ public class Damageable : MonoBehaviour,IDamageable {
 
     void ShowEffects()
     {
-        Destroy(hitObj, .1f);
-        particleEffect.SetActive(true);
+        if(hitObj!=null)
+            Destroy(hitObj, .1f);
+        if(particleEffect!=null)
+            particleEffect.SetActive(true);
+
+
     }
 
     public int GetFullHealth()
