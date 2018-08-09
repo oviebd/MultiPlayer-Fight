@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
       
         _horizontalValue = Input.GetAxis(_horizontallInput);
         _verticalValue = Input.GetAxis(_veryticalInput);
-        Debug.Log("Vertical Value " + _verticalValue);
+       // Debug.Log("Vertical Value " + _verticalValue);
         inputData = new Vector2(_horizontalValue,_verticalValue);
 
        
@@ -126,8 +126,6 @@ public class PlayerMovement : MonoBehaviour
           //  _anim.SetFloat(_speed_anim, animationSpeed, speedSmoothTime, Time.deltaTime);
         }
        
-     
-
         //  float animationSpeed = (running ? 3.0f : 6.5f) * inputDir.magnitude;
       
      }
