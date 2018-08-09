@@ -345,26 +345,56 @@ Prefab:
     - target: {fileID: 224669961631957092, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224669961631957092, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224504682573251270, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224504682573251270, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005410154150050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224005410154150050, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224662820044028350, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224662820044028350, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224489555756979744, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224489555756979744, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1255349539958192, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114328864718769598, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
-        type: 2}
-      propertyPath: _viewAngle
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 114297785887421404, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e,
-        type: 2}
-      propertyPath: viewAngle
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3cdc9ebb878318b4fbf5bf5ce5557a9e, type: 2}
